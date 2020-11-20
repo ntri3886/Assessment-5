@@ -1,0 +1,56 @@
+*{
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing:border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #5d4954;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.logo{
+  color: white;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 22px;
+}
+
+.nav-links{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+#brand{
+  font-weight: lighter;
+}
+.burger{
+  display: none;
+}
+.burger div{
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px; 
+}
+
+@media screen and (max-width:768px){
+  body{
+    display: none;
+  }
+}
