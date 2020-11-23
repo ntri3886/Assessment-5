@@ -10,8 +10,8 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
-  background-color: #5d4954;
+  min-height: 3vh;
+  background-color: #ec432c;
   font-family: 'Tajawal', sans-serif;
 }
 
@@ -130,11 +130,92 @@ slider{
   position: absolute;
 }
 
-slide a{
-  cursor: pointer;
+//slide a{
+  //cursor: pointer;
+  //text-decoration: none;
+  //font-family: 'Tajawal', sans-serif;
+  //font-size: 10px;
+  //text-align: center;
+  //display: inline-block;
+  //width: 100%;
+  //margin:auto;
+  //color: whitesmoke;
+//}
+
+button {
+ position: relative;
+ top: auto;
+ left: 43%;
+ right: 43%;
+}
+
+button {
+ cursor: pointer;
+ background: none;
+ color: whitesmoke;
+ width: 140px;
+ height: 40px;
+ border: 1px solid #ec432c;
+ font-size: 18px;
+ border-radius: 4px;
+ transition: .6s;
+ overflow: hidden;
+}
+
+button:focus {
+ outline: none;
+}
+
+button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+
+button:hover {
+   background: #ec432c;
+   cursor: pointer;
+}
+
+button:hover:before {
+ transform: translateX(300px) skewX(-15deg);
+ opacity: .6;
+ transition: .7s;
+}
+
+button:hover:after {
+ transform: translateX(300px) skewX(-15deg);
+ opacity: 1;
+ transition: .7s;
+}
+
+slide p{
+  cursor: text;
   text-decoration: none;
   font-family: 'Tajawal', sans-serif;
-  font-size: 70px;
+  font-size: 5vw;
   text-align: center;
   display: inline-block;
   width: 100%;
