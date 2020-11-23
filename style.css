@@ -3,14 +3,13 @@
     padding: 0px; 
     box-sizing:border-box;
 }
-
-
+/* Nav bar */
 
 nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 3vh;
+  min-height: 5vh;
   background-color: #ec432c;
   font-family: 'Tajawal', sans-serif;
 }
@@ -59,21 +58,21 @@ nav{
   }
 }
 
-
 @media screen and (max-width:768px){
   body{
     overflow-x: hidden;
   }
   .nav-links{
     position: absolute;
+    z-index: 9;
     right:0px;
     height:92vh;
-    top: 8vh;
-    background-color: #5d4954;
+    top: 5.1vh;
+    background-color: rgba(0,0,0,.8);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
@@ -112,7 +111,7 @@ nav{
   transform: rotate(45deg) translate(-5px,-6px);
 }
 
-// Banner
+/* Banner */
 
 html, body{
   width: 100%;
@@ -120,6 +119,8 @@ html, body{
   padding: 0;
   margin: 0px;
 }
+
+
 
 slider{
   display: block;
@@ -130,28 +131,17 @@ slider{
   position: absolute;
 }
 
-//slide a{
-  //cursor: pointer;
-  //text-decoration: none;
-  //font-family: 'Tajawal', sans-serif;
-  //font-size: 10px;
-  //text-align: center;
-  //display: inline-block;
-  //width: 100%;
-  //margin:auto;
-  //color: whitesmoke;
-//}
+/*button */
 
 button {
- position: relative;
- top: auto;
- left: 43%;
- right: 43%;
+ position: absolute;
+ top: 12vh;
+ left: 47%;
 }
 
 button {
  cursor: pointer;
- background: none;
+ background:  rgba(0,0,0,.1);
  color: whitesmoke;
  width: 140px;
  height: 40px;
@@ -222,6 +212,8 @@ slide p{
   margin:auto;
   color: whitesmoke;
 }
+
+/* Banner Animation */
 
 @keyframes slide {
   0%{ left: 100%; width: 100%;}
