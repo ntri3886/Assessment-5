@@ -32,6 +32,35 @@
   letter-spacing: 1.5px;
 }
 
+/*social media*/
+.social-media{
+  width: 100%;
+  max-width: 100%;
+  background: none;
+  position: absolute;
+  top:78%;
+  left: 73.5%;
+  transform: translate(-50%,-50%);
+  padding: 30px 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'Tajawal', sans-serif;
+  margin-top: 100px;
+}
+
+.social-media img{
+  position: relative;
+  float:left;
+  margin: auto 5px;
+  left: 18%;
+  width: 100%;
+  height: auto;
+}
+
+/*prevent page from breaking when reloading */
+.wf-loading { visibility: hidden; } /* font is loading and hidden */
+.wf-active, .wf-inactive { visibility: visible; } /* font has loaded and is visible */
 /*call to action */ 
 
 .call-to-action{
@@ -195,6 +224,28 @@ nav{
   .burger {
     display: block;
   }
+  .social-media img{
+    top:110%;
+    transform: translateY(210%);
+    left: 10%;
+  }
+
+  .cta1{
+    left:24.5%;
+    font-size: 13px;
+  }
+
+  .cta2{
+    left:43%;
+    font-size: 13px;
+  }
+
+  .cta3{
+    left: 63%;
+    font-size: 13px;
+  }
+
+  
 }
 
 .nav-active{
