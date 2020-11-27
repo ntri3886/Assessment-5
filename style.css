@@ -162,6 +162,7 @@ nav{
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 22px;
+  z-index: 19;
 }
 
 .nav-links{
@@ -762,4 +763,185 @@ article p{
 #donate{
   background: url(Images/contactImages/fourPawsLogo.png);
   height:80%;
+}
+
+
+
+.grid-container {
+  display: grid;
+  font-family: 'Tajawal', sans-serif;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 200px 1fr 200px;
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+header { grid-area: header; background-color: rgb(255, 255, 255) }
+
+main { grid-area: main; background-color: rgb(224, 224, 224) }
+
+footer { grid-area: footer; background-color: rgb(255, 255, 255) }
+
+
+@media screen and (max-width: 460px) {
+  .grid-container{
+    display: block;
+  }
+
+  header,
+  main,
+  footer {
+    width: 100%;
+    min-height: 200px
+     
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .grid-container{
+    display: block;
+  }
+  main{
+    min-height: 500px;
+  }
+  header,
+  footer {
+    width: 100%;
+    min-height: 200px
+     
+  }
+}
+
+#about header{
+  text-align: center;
+}
+
+#about header h1{
+  margin-top: 3%;
+  font-size: 50px;
+}
+
+#about header p{
+  margin-top: 1%;
+  font-size: 40px;
+}
+
+.tilesWrap {
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+.tilesWrap li {
+	display: inline-block;
+	width: 20%;
+	min-width: 200px;
+	max-width: 230px;
+	padding: 80px 20px 40px;
+	position: relative;
+	vertical-align: top;
+	margin: 10px;
+	font-family: 'Tajawal', sans-serif;
+	min-height: 30vh;
+	background: #f3523d;
+	border: none;
+	text-align: left;
+}
+.tilesWrap li p {
+	font-size: 14px;
+	line-height: 15px;
+	color: #f7f7f7;
+	margin-top: 5px;
+}
+.tilesWrap li #about-btn {
+	background: transparent;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+	transform: translateY(-10px);
+	opacity: 0;
+	cursor: pointer;
+	overflow: hidden;
+}
+.tilesWrap li #about-btn:before {
+	position: absolute;
+	background: #ec432c;
+	top: 0;
+	opacity: 0;
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+}
+.tilesWrap li h2 {
+	font-size: 20px;;
+	margin: 0;
+	position: absolute;
+	opacity: 0.2;
+	top: 50px;
+	right: 10px;
+	transition: all 0.3s ease-in-out;
+}
+.tilesWrap li:hover h2 {
+	top: 0px;
+	opacity: 0.6;
+}
+.tilesWrap li:hover #about-btn {
+	transform: translateY(0.1px);
+	opacity: 1;
+  top:-0.2px;
+  font-size: 15px;
+  left:25px ;
+}
+.tilesWrap li #about-btn:hover {
+	color: #2b2626;
+  border: 1px solid #2b2626;
+}
+.tilesWrap li #about-btn:hover:before {
+	left: 0;
+	opacity: 1;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+#about footer h1{
+  margin-top: 3%;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
